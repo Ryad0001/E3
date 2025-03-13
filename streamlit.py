@@ -42,7 +42,7 @@ data = {
 # Appel à l'API de prédiction (via POST)
 if st.button('Faire la prédiction'):
     # URL de l'API déployée sur Azure
-    url = "https://your-azure-api-url.azurewebsites.net/predict/"
+    url = "https://cancerapi-hefkcfc4b0hwarb8.francecentral-01.azurewebsites.net/predict"
     response = requests.post(url, json=data)
     
     if response.status_code == 200:
