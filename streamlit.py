@@ -41,8 +41,8 @@ data = {
 
 # Appel à l'API de prédiction (via POST)
 if st.button('Faire la prédiction'):
-    # Faire la requête à ton API FastAPI
-    url = "http://127.0.0.1:8000/predict/"
+    # URL de l'API déployée sur Azure
+    url = "https://your-azure-api-url.azurewebsites.net/predict/"
     response = requests.post(url, json=data)
     
     if response.status_code == 200:
@@ -50,7 +50,3 @@ if st.button('Faire la prédiction'):
         st.write(f"Prédiction : {prediction['prediction']}")
     else:
         st.error("Erreur lors de la prédiction.")
-
-
-
-
